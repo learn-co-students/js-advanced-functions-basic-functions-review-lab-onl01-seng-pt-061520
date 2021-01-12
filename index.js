@@ -31,11 +31,9 @@ let Calculator = {
 }
 
 function actionApplyer(integer, array=[]) {
-    if (array === undefined || array.length == 0) {
-        return integer
-    }else{
-        let x = integer
-        array.forEach(fn => x = fn(x))
-        return x
-    }
+    
+    let x = integer
+    array.forEach(fn => x = fn(x))
+    return x
+    
 }
