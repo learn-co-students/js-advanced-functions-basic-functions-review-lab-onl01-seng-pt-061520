@@ -22,21 +22,30 @@ function wrapAdjective(x="*") {
     }
   }
 
+  //defines an object called Calculator
 const Calculator = {
+    //that has a function called add
     add: function(a,b){
         return a+b
     },
+    //that has a function called subtract
     subtract: function(a,b){
         return a-b
     },
+    //that has a function called multiply
     multiply: function(a,b){
         return a*b
     },
+    //that has a function called divide
     divide: function(a,b){
         return a/b
     }
 }
 
+//Defines a function called actionApplyer
+//receives two arguments: a starting integer and an array of functions
+//returns the given starting point, unchanged, when the array is empty
+// Given 13, returns 4 after being acted on by several functions
 function actionApplyer(integer,array){
     for(let i=0; i<array.length; i++){
         integer=array[i](integer);
